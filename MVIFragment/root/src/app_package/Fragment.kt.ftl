@@ -1,19 +1,24 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import ${applicationPackage}.R
 
-class ${className}Fragment : BaseFragment<${className}ViewState, ${className}Presenter>(), ${className}View {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+class ${fragmentClass} : BaseFragment<${viewStateName}, ${presenterName}>(),${viewName} {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
+        layoutInflater.inflate(R.layout.${layoutName}, container, false)
 
-        setContentView(R.layout.${layoutName})
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
-        Dagger${className}Component.builder()
-                .${className}Module(${className}Module(this)).build().inject(this)
+        Dagger${componentName}.builder().build().inject(this)
 
         subscribeToViewState()
     }
 
-    override fun render(viewState: ${className}ViewState) = TODO("Implement rendering")
+    override fun render(viewState: ${viewStateName}) {
+        TODO("Implement view rendering")
+    }
 }

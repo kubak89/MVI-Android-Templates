@@ -2,8 +2,8 @@ package ${escapeKotlinIdentifiers(packageName)}
 
 import javax.inject.Inject
 
-class ${className}Presenter @Inject constructor(${className}View: ${className}View,
-                                         initialState: ${className}ViewState) : Presenter<${className}ViewState, ${className}PartialState>() {
+class ${presenterName} @Inject constructor(view: ${viewName},
+                                         initialState: ${viewStateName}) : Presenter<${viewStateName}, ${partialStateName}>() {
 
     init {
       TODO("Subscribe to view intents")
@@ -11,6 +11,6 @@ class ${className}Presenter @Inject constructor(${className}View: ${className}Vi
       subscribeToViewIntents(initialState)
     }
 
-    override fun reduceViewState(previousState: ${className}ViewState, partialState: ${className}PartialState) =
+    override fun reduceViewState(previousState: ${viewStateName}, partialState: ${partialStateName}) =
             TODO()
 }

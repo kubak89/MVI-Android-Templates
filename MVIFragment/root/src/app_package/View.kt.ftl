@@ -1,5 +1,5 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-interface ${className}View {
+interface ${viewName} {
   //TODO add some intents here
 }

@@ -2,17 +2,16 @@
 <template
     format="4"
     revision="1"
-    name="Empty MVI Activity"
-    description="Creates a new, empty MVI activity">
+    name="Empty MVI Fragment"
+    description="Creates a new, empty MVI fragment">
 
-    <category value="Activity" />
+    <category value="MVI" />
 
     <parameter id="fragmentName"
           name="Fragment Name"
           type="string"
           constraints="class|unique|nonempty"
-          suggest="${layoutToActivity(layoutName)}"
-          default="Empty"
+          default="Main"
           help="The name of the fragment"/>
 
     <parameter
@@ -20,8 +19,8 @@
           name="Layout Name"
           type="string"
           constraints="layout|unique|nonempty"
-          suggest="${activityToLayout(className)}"
-          default="activity_main"
+          suggest="fragment_${extractLetters(fragmentName?lower_case)}"
+          default="fragment_main"
           help="The name of the layout to create for the activity"/>
 
     <globals file="globals.xml.ftl" />
