@@ -1,4 +1,4 @@
-# MVI activity template for Android Studio
+# MVI templates for Android Studio
 
 This is a group template for MVI application components.
 
