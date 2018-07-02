@@ -1,5 +1,5 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-sealed class ${className}PartialState {
+sealed class ${partialStateName} {
   //TODO add partial state classes
 }

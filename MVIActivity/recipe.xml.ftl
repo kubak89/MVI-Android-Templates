@@ -9,7 +9,7 @@
   <instantiate from="src/app_package/Presenter.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${className}Presenter.kt" />
   <instantiate from="src/app_package/View.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${className}View.kt" />
   <instantiate from="src/app_package/ViewState.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${className}ViewState.kt" />
-  <open file="${escapeXmlAttribute(srcOut)}/${className}Activity.kt" />
+  <open file="${escapeXmlAttribute(srcOut)}/${className}.kt" />
   <open file="${escapeXmlAttribute(srcOut)}/${className}Component.kt" />
   <open file="${escapeXmlAttribute(srcOut)}/${className}Module.kt" />
   <open file="${escapeXmlAttribute(srcOut)}/${className}PartialState.kt" />

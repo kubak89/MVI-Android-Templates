@@ -4,14 +4,14 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ${className}Module(private val activity: ${className}Activity) {
+class ${moduleName}(private val activity: ${activityClass}) {
 
     @Provides
-    fun provideLoginView(): ${className}View = ${className}Activity
+    fun provideLoginView(): ${viewName} = ${activityClass}
 
     @Provides
-    fun provideSavedViewState(): ${className}ViewState =
-    ${className}Activity.intent.getSerializableExtra(
-            KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${className}ViewState
-            ?: ${className}ViewState()
+    fun provideSavedViewState(): ${viewStateName} =
+    ${activityClass}.intent.getSerializableExtra(
+            KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${viewStateName}
+            ?: ${viewStateName}()
 }

@@ -2,8 +2,8 @@ package ${escapeKotlinIdentifiers(packageName)}
 
 import javax.inject.Inject
 
-class ${className}Presenter @Inject constructor(${className}View: ${className}View,
-                                         initialState: ${className}ViewState) : Presenter<${className}ViewState, ${className}PartialState>() {
+class ${presenterName} @Inject constructor(view: ${viewName},
+                                         initialState: ${viewStateName}) : Presenter<${viewStateName}, ${className}PartialState>() {
 
     init {
       TODO("Subscribe to view intents")

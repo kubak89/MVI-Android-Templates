@@ -3,17 +3,17 @@ package ${escapeKotlinIdentifiers(packageName)}
 import android.os.Bundle
 import ${applicationPackage}.R
 
-class ${className}Activity : BaseActivity<${className}ViewState, ${className}Presenter>(), ${className}View {
+class ${activityClass} : BaseActivity<${viewStateName}, ${presenterName}>(), ${viewName} {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.${layoutName})
 
-        Dagger${className}Component.builder()
-                .${className}Module(${className}Module(this)).build().inject(this)
+        Dagger${componentName}.builder()
+                .${moduleName}(${moduleName}(this)).build().inject(this)
 
         subscribeToViewState()
     }
 
-    override fun render(viewState: ${className}ViewState) = TODO("Implement rendering")
+    override fun render(viewState: ${viewStateName}) = TODO("Implement rendering")
 }
