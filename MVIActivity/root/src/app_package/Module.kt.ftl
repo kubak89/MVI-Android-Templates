@@ -11,7 +11,7 @@ class ${moduleName}(private val activity: ${activityClass}) {
 
     @Provides
     fun provideSavedViewState(): ${viewStateName} =
-    ${activityClass}.intent.getSerializableExtra(
+    activity.intent.getSerializableExtra(
             KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${viewStateName}
             ?: ${viewStateName}()
 }
