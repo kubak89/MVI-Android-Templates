@@ -8,6 +8,6 @@
   <global id="viewStateName" value="${fragmentName}ViewState" />
   <global id="partialStateName" value="${fragmentName}PartialState" />
   <global id="moduleName" value="${fragmentName}Module" />
-  <global id="componentName" value="${fragmentName}Module" />
+  <global id="componentName" value="${fragmentName}Component" />
   <global id="partialStateName" value="${fragmentName}PartialState" />
 </globals>
