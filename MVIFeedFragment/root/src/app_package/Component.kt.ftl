@@ -1,10 +1,9 @@
-package com.tenClouds.tenCats.presentation.feed
+package ${escapeKotlinIdentifiers(packageName)}
 
-import com.tenClouds.tenCats.presentation.di.FragmentScope
 import dagger.Component
 
 @FragmentScope
-@Component(modules = [FeedModule::class])
-interface FeedComponent {
-    fun inject(fragment: FeedFragment)
+@Component(modules = [${moduleName}::class])
+interface ${componentName} {
+    fun inject(fragment: ${fragmentName})
 }

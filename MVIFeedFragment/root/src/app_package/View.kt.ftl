@@ -1,8 +1,8 @@
-package com.tenClouds.tenCats.presentation.feed
+package ${escapeKotlinIdentifiers(packageName)}
 
 import io.reactivex.Observable
 
-interface FeedView {
+interface ${viewName} {
     val loadFirstPageIntent: Observable<Any>
     val loadNextPageIntent: Observable<Any>
 }

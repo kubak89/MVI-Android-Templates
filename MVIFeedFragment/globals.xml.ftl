@@ -12,5 +12,6 @@
   <global id="moduleName" value="${name}Module" />
   <global id="componentName" value="${name}Component" />
   <global id="partialStateName" value="${name}PartialState" />
-  <global id="adapterName" value="${name}Adapter"
+  <global id="adapterName" value="${name}Adapter" />
+  <global id="viewHolderName" value="${name}AdapterViewHolder" />
 </globals>

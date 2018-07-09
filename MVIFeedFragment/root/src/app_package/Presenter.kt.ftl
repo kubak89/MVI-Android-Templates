@@ -1,27 +1,27 @@
-package com.tenClouds.tenCats.presentation.feed
+package ${escapeKotlinIdentifiers(packageName)}
 
 import com.tenClouds.tenCats.domain.FeedRepository
 import com.tenClouds.tenCats.presentation.base.Presenter
 import javax.inject.Inject
 
-class FeedPresenter @Inject constructor(view: FeedView,
-                                        initialState: FeedViewState,
-                                        feedRepository: FeedRepository) : Presenter<FeedViewState, FeedPartialState>() {
+class ${presenterName} @Inject constructor(view: ${viewName},
+                                        initialState: ${viewStateName},
+                                        feedRepository: ${feedItemsRepositoryName}) : Presenter<${viewStateName}, ${partialStateName}>() {
 
     init {
         view.loadFirstPageIntent.startWith(Any()).flatMap {
             feedRepository.getFeedItems().toObservable()
                     .map {
-                        FeedPartialState.ItemsDownloaded(it) as FeedPartialState
+                        ${partialStateName}.ItemsDownloaded(it) as ${partialStateName}
                     }
                     .onErrorReturn {
-                        FeedPartialState.ItemsDownloadError(it) as FeedPartialState
+                        ${partialStateName}.ItemsDownloadError(it) as ${partialStateName}
                     }
         }
 
         subscribeToViewIntents(initialState)
     }
 
-    override fun reduceViewState(previousState: FeedViewState, partialState: FeedPartialState) =
+    override fun reduceViewState(previousState: ${viewStateName}, partialState: ${partialStateName}) =
             TODO()
 }

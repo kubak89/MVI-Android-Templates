@@ -1,8 +1,8 @@
-package com.tenClouds.tenCats.presentation.feed
+package ${escapeKotlinIdentifiers(packageName)}
 
-import com.tenClouds.tenCats.domain.FeedItem
+import ${escapeKotlinIdentifiers(packageName)}.domain.${feedItemName}
 
-sealed class FeedPartialState {
-    class ItemsDownloaded(val items: List<FeedItem>): FeedPartialState()
-    class ItemsDownloadError(val throwable: Throwable): FeedPartialState()
+sealed class ${partialStateName} {
+    class ItemsDownloaded(val items: List<{${feedItemName}}>): ${partialStateName}()
+    class ItemsDownloadError(val throwable: Throwable): ${partialStateName}()
 }

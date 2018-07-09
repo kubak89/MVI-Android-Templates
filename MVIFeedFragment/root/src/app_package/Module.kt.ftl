@@ -1,14 +1,14 @@
-package com.tenClouds.tenCats.presentation.feed
+package ${escapeKotlinIdentifiers(packageName)}
 
 import dagger.Module
 import dagger.Provides
 
 @Module
-class FeedModule(private val fragment: FeedFragment) {
+class ${moduleName}(private val fragment: ${fragmentName}) {
 
     @Provides
-    fun provideFeedView(): FeedView = fragment
+    fun provideFeedView(): ${viewName} = fragment
 
     @Provides
-    fun provideInitialState(): FeedViewState = FeedViewState()
+    fun provideInitialState(): ${viewStateName} = ${viewStateName}()
 }
