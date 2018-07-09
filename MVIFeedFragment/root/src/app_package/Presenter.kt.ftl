@@ -1,7 +1,5 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import com.tenClouds.tenCats.domain.FeedRepository
-import com.tenClouds.tenCats.presentation.base.Presenter
 import javax.inject.Inject
 
 class ${presenterName} @Inject constructor(view: ${viewName},
