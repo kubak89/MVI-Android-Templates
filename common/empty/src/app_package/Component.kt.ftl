@@ -6,5 +6,5 @@ import dagger.Component
 @ActivityScope
 @Component(modules = [${moduleName}::class])
 interface ${componentName} {
-    fun inject(fragment: ${fragmentClass})
+    fun inject(activity: ${fragmentClass})
 }
