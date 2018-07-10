@@ -2,25 +2,24 @@
 <template
     format="4"
     revision="1"
-    name="Empty MVI Fragment"
-    description="Creates a new, empty MVI fragment">
+    name="Empty MVI Activity"
+    description="Creates a new, empty MVI activity">
 
     <category value="MVI" />
 
-    <parameter id="fragmentName"
-          name="Fragment Name"
+    <parameter id="featureName"
+          name="Feature name"
           type="string"
           constraints="class|unique|nonempty"
-          default="Main"
-          help="The name of the fragment"/>
+          default="Empty"
+          help="The name of the feature"/>
 
     <parameter
           id="layoutName"
           name="Layout Name"
           type="string"
           constraints="layout|unique|nonempty"
-          suggest="fragment_${extractLetters(fragmentName?lower_case)}"
-          default="fragment_main"
+          suggest="activity_${featureName?lower_case}"
           help="The name of the layout to create for the activity"/>
 
     <globals file="globals.xml.ftl" />

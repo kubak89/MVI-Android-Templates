@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ${moduleName}(private val fragment: ${fragmentClass}) {
+class ${moduleName}(private val fragment: ${androidClassName}) {
 
   @Provides
   fun provideLoginView(): ${viewName} = fragment
