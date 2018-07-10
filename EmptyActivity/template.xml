@@ -7,19 +7,19 @@
 
     <category value="MVI" />
 
-    <parameter id="className"
-          name="Activity Name"
+    <parameter id="featureName"
+          name="Feature name"
           type="string"
           constraints="class|unique|nonempty"
           default="Empty"
-          help="The name of the activity"/>
+          help="The name of the feature"/>
 
     <parameter
           id="layoutName"
           name="Layout Name"
           type="string"
           constraints="layout|unique|nonempty"
-          suggest="${activityToLayout(className)}"
+          suggest="activity_${featureName?lower_case}"
           help="The name of the layout to create for the activity"/>
 
     <globals file="globals.xml.ftl" />

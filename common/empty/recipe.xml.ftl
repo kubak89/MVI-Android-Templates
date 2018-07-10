@@ -6,6 +6,7 @@
   <instantiate from="src/app_package/Presenter.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${presenterName}.kt" />
   <instantiate from="src/app_package/View.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${viewName}.kt" />
   <instantiate from="src/app_package/ViewState.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${viewStateName}.kt" />
+
   <open file="${escapeXmlAttribute(srcOut)}/${componentName}.kt" />
   <open file="${escapeXmlAttribute(srcOut)}/${partialStateName}.kt" />
   <open file="${escapeXmlAttribute(srcOut)}/${presenterName}.kt" />

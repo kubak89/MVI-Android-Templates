@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import ${applicationPackage}.R
 
-class ${fragmentClass} : BaseFragment<${viewStateName}, ${presenterName}>(),${viewName} {
+class ${androidClassName} : BaseFragment<${viewStateName}, ${presenterName}>(),${viewName} {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         layoutInflater.inflate(R.layout.${layoutName}, container, false)
 

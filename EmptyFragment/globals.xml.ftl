@@ -2,12 +2,7 @@
 <globals>
   <global id="resOut" value="${resDir}" />
   <global id="srcOut" value="${srcDir}/${slashedPackageName(packageName)}" />
-  <global id="fragmentClass" value="${fragmentName}Fragment" />
-  <global id="presenterName" value="${fragmentName}Presenter" />
-  <global id="viewName" value="${fragmentName}View" />
-  <global id="viewStateName" value="${fragmentName}ViewState" />
-  <global id="partialStateName" value="${fragmentName}PartialState" />
-  <global id="moduleName" value="${fragmentName}Module" />
-  <global id="componentName" value="${fragmentName}Component" />
-  <global id="partialStateName" value="${fragmentName}PartialState" />
+  <global id="androidClassName" value="${featureName}Fragment" />
+
+  <#include "../common/empty/globals.xml.ftl" />
 </globals>

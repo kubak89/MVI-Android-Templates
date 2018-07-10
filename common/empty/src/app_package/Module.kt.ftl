@@ -4,10 +4,10 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ${moduleName}(private val fragment: ${androidClassName}) {
+class ${moduleName}(private val androidClass: ${androidClassName}) {
 
   @Provides
-  fun provideLoginView(): ${viewName} = fragment
+  fun provideLoginView(): ${viewName} = androidClass
 
   @Provides
   fun provideSavedViewState(): ${viewStateName} =
