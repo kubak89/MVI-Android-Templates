@@ -1,10 +1,9 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import com.tenclouds.xlenergy.di.ActivityScope
 import dagger.Component
 
-@ActivityScope
+@FragmentScope
 @Component(modules = [${moduleName}::class])
 interface ${componentName} {
-    fun inject(injected: ${androidClassName})
+    fun inject(fragment: ${androidClassName})
 }
