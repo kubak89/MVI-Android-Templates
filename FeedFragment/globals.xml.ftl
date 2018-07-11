@@ -2,8 +2,10 @@
 <globals>
   <global id="resOut" value="${resDir}" />
   <global id="srcOut" value="${srcDir}/${slashedPackageName(packageName)}" />
-  <global id="androidClassName" value="${featureName}Fragment" />
 
-  <#include "../common/empty/globals.xml.ftl" />
+  <global id="fragmentName" value="${featureName}Fragment" />
+  <global id="moduleName" value="${featureName}Module" />
+
   <#include "../common/di/globals.xml.ftl" />
+  <#include "../common/feed/globals.xml.ftl" />
 </globals>
