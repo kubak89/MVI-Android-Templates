@@ -7,7 +7,7 @@ import dagger.Provides
 class ${moduleName}(private val activity: ${androidClassName}) {
 
     @Provides
-    fun provideLoginView(): ${viewName} = ${androidClassName}
+    fun provideLoginView(): ${viewName} = activity
 
     @Provides
     fun provideSavedViewState(): ${viewStateName} =
