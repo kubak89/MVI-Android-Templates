@@ -10,7 +10,8 @@ class ${androidClassName} : BaseActivity<${viewStateName}, ${presenterName}>(), 
         setContentView(R.layout.${layoutName})
 
         Dagger${componentName}.builder()
-                .${moduleName}(${moduleName}(this)).build().inject(this)
+                .${moduleName}(${moduleName}(this, savedInstanceState))
+                .build().inject(this)
 
         subscribeToViewState()
     }

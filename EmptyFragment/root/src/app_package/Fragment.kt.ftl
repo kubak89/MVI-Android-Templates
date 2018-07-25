@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import ${applicationPackage}.R
 
+const val KEY_SAVED_FRAGMENT_STATE = "savedState"
+
 class ${androidClassName} : BaseFragment<${viewStateName}, ${presenterName}>(),${viewName} {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         layoutInflater.inflate(R.layout.${layoutName}, container, false)
@@ -16,6 +18,11 @@ class ${androidClassName} : BaseFragment<${viewStateName}, ${presenterName}>(),$
         Dagger${componentName}.builder().build().inject(this)
 
         subscribeToViewState()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putSerializable(KEY_SAVED_FRAGMENT_STATE, presenter.getCurrentViewState())
     }
 
     override fun render(viewState: ${viewStateName}) {

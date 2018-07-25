@@ -4,13 +4,14 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ${moduleName}(private val fragment: ${androidClassName}) {
+class ${moduleName}(private val fragment: ${androidClassName},
+                    private val savedInstanceState: Bundle?) {
 
   @Provides
   fun provideLoginView(): ${viewName} = fragment
 
   @Provides
-  fun provideSavedViewState(): ${viewStateName} =
-        fragment.arguments?.getSerializable(KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${viewStateName}
+  fun provideInitialState(): ${viewStateName} =
+        savedInstanceState?.getSerializable(KEY_SAVED_FRAGMENT_STATE) as? ${viewStateName}
                 ?: ${viewStateName}()
 }
