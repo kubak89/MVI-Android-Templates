@@ -3,7 +3,7 @@ package ${escapeKotlinIdentifiers(packageName)}
 import android.os.Bundle
 import ${applicationPackage}.R
 
-class ${androidClassName} : BaseActivity<${viewStateName}, ${presenterName}>(), ${viewName} {
+class ${androidClassName} : ${baseActivityName}<${viewStateName}, ${presenterName}>(), ${viewName} {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

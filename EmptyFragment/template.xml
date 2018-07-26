@@ -23,6 +23,22 @@
           default="fragment_main"
           help="The name of the layout to create for the activity"/>
 
+    <parameter
+          id="basePresenterName"
+          name="Base Presenter Name"
+          type="string"
+          constraints="nonempty"
+          suggest="BasePresenter"
+          help="The name of a base presenter class"/>
+
+    <parameter
+          id="baseFragmentName"
+          name="Base Fragment Name"
+          type="string"
+          constraints="nonempty|class"
+          suggest="BaseFragment"
+          help="The name of a base fragment class"/>
+
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 
