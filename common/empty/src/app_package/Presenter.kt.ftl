@@ -2,13 +2,12 @@ package ${escapeKotlinIdentifiers(packageName)}
 
 import javax.inject.Inject
 
-class ${presenterName} @Inject constructor(view: ${viewName},
-                                         initialState: ${viewStateName}) : BasePresenter<${viewStateName}, ${partialStateName}>() {
+class ${presenterName} @Inject constructor(private val view: MainView,
+                                        private val initialState: MainViewState) : BasePresenter<MainViewState, MainPartialState>() {
+    override fun connectToView() {
+        TODO("Create intent observables")
 
-    init {
-      TODO("Subscribe to view intents")
-
-      subscribeToViewIntents(initialState)
+        subscribeToViewIntents(initialState)
     }
 
     override fun reduceViewState(previousState: ${viewStateName}, partialState: ${partialStateName}) =
