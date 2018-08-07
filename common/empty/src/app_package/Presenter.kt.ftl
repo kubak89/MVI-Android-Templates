@@ -2,8 +2,8 @@ package ${escapeKotlinIdentifiers(packageName)}
 
 import javax.inject.Inject
 
-class ${presenterName} @Inject constructor(private val view: MainView,
-                                        private val initialState: MainViewState) : BasePresenter<MainViewState, MainPartialState>() {
+class ${presenterName} @Inject constructor(private val view: ${viewName},
+                                        private val initialState: ${viewStateName}) : BasePresenter<${viewStateName}, ${partialStateName}>() {
     override fun connectToView() {
         TODO("Create intent observables")
 
