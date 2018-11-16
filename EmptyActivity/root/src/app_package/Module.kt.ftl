@@ -1,5 +1,6 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
+import android.os.Bundle
 import dagger.Module
 import dagger.Provides
 
