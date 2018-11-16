@@ -1,5 +1,6 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
+import android.os.Bundle
 import dagger.Module
 import dagger.Provides
 
@@ -8,7 +9,7 @@ class ${moduleName}(private val activity: ${androidClassName},
                     private val savedInstanceState: Bundle?) {
 
     @Provides
-    fun provideLoginView(): ${viewName} = activity
+    fun provide${viewName}(): ${viewName} = activity
 
     @Provides
     fun provideSavedViewState(): ${viewStateName} =
