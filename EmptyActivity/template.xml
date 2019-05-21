@@ -7,6 +7,13 @@
 
     <category value="MVI" />
 
+    <parameter
+        id="rootPackage"
+        name="Application package name"
+        type="string"
+        constraints="package"
+        default="com.example.appName" />
+
     <parameter id="featureName"
           name="Feature name"
           type="string"
@@ -21,22 +28,6 @@
           constraints="layout|unique|nonempty"
           suggest="activity_${featureName?lower_case}"
           help="The name of the layout to create for the activity"/>
-
-    <parameter
-          id="basePresenterName"
-          name="Base Presenter Name"
-          type="string"
-          constraints="nonempty"
-          suggest="BasePresenter"
-          help="The name of a base presenter class"/>
-
-    <parameter
-          id="baseActivityName"
-          name="Base Activity Name"
-          type="string"
-          constraints="nonempty"
-          suggest="BaseActivity"
-          elp="The name of a base activity class"/>
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

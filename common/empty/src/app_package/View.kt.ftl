@@ -1,5 +1,7 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-interface ${viewName} {
+import ${rootPackage}.presentation.base.BaseView
+
+interface ${viewName} : BaseView {
   //TODO add some intents here
 }
