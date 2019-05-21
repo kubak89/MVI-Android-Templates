@@ -1,19 +1,23 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import android.os.Bundle
+import ${rootPackage}.presentation.base.BaseActivity
 import dagger.Module
 import dagger.Provides
 
 @Module
-class ${moduleName}(private val activity: ${androidClassName},
-                    private val savedInstanceState: Bundle?) {
+class ${moduleName} {
 
     @Provides
-    fun provide${viewName}(): ${viewName} = activity
+    fun provide${viewName}(activity: ${androidClassName}): ${viewName} = activity
 
     @Provides
-    fun provideSavedViewState(): ${viewStateName} =
-        savedInstanceState?.getSerializable(
-                  KEY_SAVED_ACTIVITY_VIEW_STATE) as? LoginViewState
-                  ?: LoginViewState()
+    fun provide${presenterName}(
+            view: ${viewName},
+            initialState: ${viewStateName}
+    ): ${presenterName} = ${presenterName}(view, initialState)
+
+    @Provides
+    fun provideInitial${viewStateName}(activity: ${androidClassName}): ${viewStateName} = activity.savedInstanceState?.getSerializable(
+            BaseActivity.KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${viewStateName}
+            ?: ${viewStateName}()
 }

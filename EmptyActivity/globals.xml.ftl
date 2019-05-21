@@ -5,5 +5,4 @@
  <global id="androidClassName" value="${featureName}Activity" />
 
  <#include "../common/empty/globals.xml.ftl" />
- <#include "../common/di/globals.xml.ftl" />
 </globals>
