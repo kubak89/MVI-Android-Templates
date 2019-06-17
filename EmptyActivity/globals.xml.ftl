@@ -7,5 +7,5 @@
     <global id="manifestOut" value="getAppManifestDir()"/>
     <global id="themeName" value="${themeName}"/>
 
-    <#include "../common/empty/globals.xml.ftl" />
+    <#include "../common/globals.xml.ftl" />
 </globals>

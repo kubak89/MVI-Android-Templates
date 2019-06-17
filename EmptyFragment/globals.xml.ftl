@@ -2,5 +2,5 @@
 <globals>
   <global id="androidClassName" value="${featureName}Fragment" />
 
-  <#include "../common/empty/globals.xml.ftl" />
+  <#include "../common/globals.xml.ftl" />
 </globals>

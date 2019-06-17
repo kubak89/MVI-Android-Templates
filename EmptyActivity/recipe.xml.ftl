@@ -1,5 +1,5 @@
 <recipe>
-  <#include "../common/empty/recipe.xml.ftl" />
+  <#include "../common/recipe.xml.ftl" />
 
   <merge from="AndroidManifest.xml.ftl" to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
 
