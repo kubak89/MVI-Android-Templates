@@ -1,4 +1,4 @@
-<recipe folder="root://MVI/common/empty">
+<recipe folder="root://MVI/common">
   <instantiate from="res/layout/layout.xml.ftl" to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 
   <instantiate from="src/app_package/Presenter.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${presenterName}.kt" />
