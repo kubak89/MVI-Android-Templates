@@ -2,8 +2,9 @@ package ${escapeKotlinIdentifiers(packageName)}
 
 import io.reactivex.Observable
 import ${rootPackage}.presentation.base.BasePresenter
+import javax.inject.Inject
 
-class ${presenterName}(
+class ${presenterName} @Inject constructor(
         private val view: ${viewName},
         initialState: ${viewStateName}
 ) : BasePresenter<${viewStateName}, ${viewStateName}.PartialState>(initialState) {

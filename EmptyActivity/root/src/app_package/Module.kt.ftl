@@ -11,12 +11,6 @@ class ${moduleName} {
     fun provide${viewName}(activity: ${androidClassName}): ${viewName} = activity
 
     @Provides
-    fun provide${presenterName}(
-            view: ${viewName},
-            initialState: ${viewStateName}
-    ): ${presenterName} = ${presenterName}(view, initialState)
-
-    @Provides
     fun provideInitial${viewStateName}(activity: ${androidClassName}): ${viewStateName} = activity.savedInstanceState?.getSerializable(
             BaseActivity.KEY_SAVED_ACTIVITY_VIEW_STATE) as? ${viewStateName}
             ?: ${viewStateName}()
