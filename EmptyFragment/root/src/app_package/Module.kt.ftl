@@ -12,12 +12,6 @@ class ${moduleName} {
     fun provide${viewName}(fragment: ${androidClassName}): ${viewName} = fragment
 
     @Provides
-    fun provide${presenterName}(
-            view: ${viewName},
-            initialState: ${viewStateName}
-    ): ${presenterName} = ${presenterName}(view, initialState)
-
-    @Provides
     fun provideInitial${viewStateName}(fragment: ${androidClassName}): ${viewStateName} = fragment.savedInstanceState?.getSerializable(
             BaseFragment.KEY_SAVED_FRAGMENT_VIEW_STATE) as? ${viewStateName}
             ?: ${viewStateName}()
