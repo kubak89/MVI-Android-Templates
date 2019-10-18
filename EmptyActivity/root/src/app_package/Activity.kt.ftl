@@ -1,20 +1,18 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import android.os.Bundle
-import ${applicationPackage}.R
+import ${rootPackage}.R
+import ${rootPackage}.presentation.base.BaseActivity
 
-class ${androidClassName} : ${baseActivityName}<${viewStateName}, ${presenterName}>(), ${viewName} {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+class ${androidClassName} : BaseActivity<${viewStateName}, ${presenterName}>(
+        R.layout.${layoutName}
+), ${viewName} {
+    //region Intents
 
-        setContentView(R.layout.${layoutName})
+    //endregion
 
-        Dagger${componentName}.builder()
-                .${moduleName}(${moduleName}(this, savedInstanceState))
-                .build().inject(this)
-
-        subscribeToViewState()
+    //region Render methods
+    override fun render(viewState: ${viewStateName}) {
+        TODO("Handle render")
     }
-
-    override fun render(viewState: ${viewStateName}) = TODO("Implement rendering")
+    //endregion
 }

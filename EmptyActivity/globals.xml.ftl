@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
-<globals>
- <global id="resOut" value="${resDir}" />
- <global id="srcOut" value="${srcDir}/${slashedPackageName(packageName)}" />
- <global id="androidClassName" value="${featureName}Activity" />
 
- <#include "../common/empty/globals.xml.ftl" />
- <#include "../common/di/globals.xml.ftl" />
+<globals>
+  <#assign themeName=getApplicationTheme().name!'AppTheme'>
+
+    <global id="androidClassName" value="${featureName}Activity"/>
+    <global id="manifestOut" value="getAppManifestDir()"/>
+    <global id="themeName" value="${themeName}"/>
+
+    <#include "../common/globals.xml.ftl" />
 </globals>

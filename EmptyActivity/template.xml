@@ -1,42 +1,32 @@
 <?xml version="1.0"?>
 <template
-    format="4"
-    revision="1"
     name="Empty MVI Activity"
     description="Creates a new, empty MVI activity">
 
     <category value="MVI" />
 
-    <parameter id="featureName"
-          name="Feature name"
-          type="string"
-          constraints="unique|nonempty"
-          default="Empty"
-          help="The name of the feature"/>
+    <parameter
+        id="rootPackage"
+        name="Application package name"
+        type="string"
+        constraints="package"
+        default="com.example.appName" />
 
     <parameter
-          id="layoutName"
-          name="Layout Name"
-          type="string"
-          constraints="layout|unique|nonempty"
-          suggest="activity_${featureName?lower_case}"
-          help="The name of the layout to create for the activity"/>
+        id="featureName"
+        name="Feature name"
+        type="string"
+        constraints="unique|nonempty"
+        default="Empty"
+        help="The name of the feature"/>
 
     <parameter
-          id="basePresenterName"
-          name="Base Presenter Name"
-          type="string"
-          constraints="nonempty"
-          suggest="BasePresenter"
-          help="The name of a base presenter class"/>
-
-    <parameter
-          id="baseActivityName"
-          name="Base Activity Name"
-          type="string"
-          constraints="nonempty"
-          suggest="BaseActivity"
-          elp="The name of a base activity class"/>
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="activity_${featureName?lower_case}"
+        help="The name of the layout to create for the activity"/>
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
