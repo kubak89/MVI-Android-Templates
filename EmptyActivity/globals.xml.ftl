@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <globals>
-  <#assign themeName=getApplicationTheme().name!'AppTheme'>
+  <#assign themeName=(getApplicationTheme().name)!'AppTheme'>
 
     <global id="androidClassName" value="${featureName}Activity"/>
     <global id="manifestOut" value="getAppManifestDir()"/>
