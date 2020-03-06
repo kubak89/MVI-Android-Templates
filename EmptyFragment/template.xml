@@ -25,7 +25,7 @@
         name="Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        default="activity_${featureName?lower_case}"
+        default="fragment_${featureName?lower_case}"
         help="The name of the layout to create for the fragment"/>
 
     <globals file="globals.xml.ftl" />
