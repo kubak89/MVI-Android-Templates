@@ -1,11 +1,11 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
 import ${rootPackage}.R
-import ${rootPackage}.presentation.base.BaseActivity
+import ${rootPackage}.presentation.features.base.BaseActivity
 
-class ${androidClassName} : BaseActivity<${viewStateName}, ${presenterName}>(
+class ${activityName} : BaseActivity<${viewStateName}, ${presenterName}>(
         R.layout.${layoutName}
-), ${viewName} {
+) {
     //region Intents
 
     //endregion

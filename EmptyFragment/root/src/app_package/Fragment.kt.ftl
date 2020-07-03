@@ -1,11 +1,11 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
 import ${rootPackage}.R
-import ${rootPackage}.presentation.base.BaseFragment
+import ${rootPackage}.presentation.features.base.BaseFragment
 
-class ${androidClassName} : BaseFragment<${viewStateName}, ${presenterName}>(
+class ${fragmentName} : BaseFragment<${viewStateName}, ${presenterName}>(
         R.layout.${layoutName}
-), ${viewName} {
+) {
     override fun render(viewState: ${viewStateName}) {
       TODO("Do not forget to add necessary code inside FragmentInjector class")
       TODO("Handle render")

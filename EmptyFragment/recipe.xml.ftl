@@ -2,8 +2,9 @@
 <recipe>
   <#include "../common/recipe.xml.ftl" />
 
-  <instantiate from="src/app_package/Fragment.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${androidClassName}.kt" />
+  <instantiate from="src/app_package/Fragment.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt" />
   <instantiate from="src/app_package/Module.kt.ftl" to="${escapeXmlAttribute(srcOut)}/${moduleName}.kt" />
 
-  <open file="${escapeXmlAttribute(srcOut)}/${androidClassName}.kt" />
+  <open file="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt" />
+  <open file="${escapeXmlAttribute(srcOut)}/${moduleName}.kt" />
 </recipe>

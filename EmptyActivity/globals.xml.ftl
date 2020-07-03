@@ -3,7 +3,7 @@
 <globals>
   <#assign themeName=(getApplicationTheme().name)!'AppTheme'>
 
-    <global id="androidClassName" value="${featureName}Activity"/>
+    <global id="activityName" value="${featureName}Activity"/>
     <global id="manifestOut" value="getAppManifestDir()"/>
     <global id="themeName" value="${themeName}"/>
 
